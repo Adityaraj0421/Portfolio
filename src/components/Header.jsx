@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Magnetic from './Magnetic';
 
 export default function Header() {
+    const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => {
@@ -89,8 +90,8 @@ export default function Header() {
                 </div>
             </div>
 
-            {/* Mobile Menu Overlay */}
-            <AnimatePresence>
+            {/* Mobile Menu Overlay - Commented out for debugging */}
+            {/* <AnimatePresence>
                 {mobileMenuOpen && (
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
@@ -116,7 +117,7 @@ export default function Header() {
                         </a>
                     </motion.div>
                 )}
-            </AnimatePresence>
+            </AnimatePresence> */}
         </motion.header>
     );
 }
