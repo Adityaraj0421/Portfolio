@@ -70,7 +70,7 @@ export default function BentoGrid({ setActiveProject }) {
                                 <motion.div
                                     whileHover={{ scale: 1.02 }}
                                     transition={{ type: "spring", stiffness: 300 }}
-                                    className={`h-full flex flex-col ${project.id === 'photo' ? 'justify-end' : 'justify-between'} p-10 relative z-10`}
+                                    className={`h-full flex flex-col ${project.id === 'photo' ? 'justify-end' : 'justify-between'} p-6 md:p-10 relative z-10`}
                                 >
                                     <div>
                                         <motion.span layoutId={`subtitle-${project.id}`} className={`text-xs font-mono uppercase tracking-widest mb-2 block ${project.id === 'brick' ? 'text-blue-400' : project.id === 'jobmato' ? 'text-green-400' : project.id === 'platform' ? 'text-orange-400' : 'text-white/60'}`}>

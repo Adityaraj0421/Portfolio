@@ -1,18 +1,20 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Lenis from 'lenis';
 import InteractiveGrid from './components/InteractiveGrid';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CursorSpotlight from './components/CursorSpotlight';
 import GrainOverlay from './components/GrainOverlay';
+import Preloader from './components/Preloader';
 import Home from './pages/Home';
 import ProjectPage from './pages/ProjectPage';
 import './index.css';
 
 function App() {
   const location = useLocation();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -40,6 +42,10 @@ function App() {
 
   return (
     <div className="bg-dark min-h-screen text-white selection:bg-white/20 selection:text-white">
+      <AnimatePresence mode="wait">
+        {loading && <Preloader onComplete={() => setLoading(false)} />}
+      </AnimatePresence>
+
       <GrainOverlay />
       <CursorSpotlight />
 

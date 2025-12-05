@@ -90,8 +90,8 @@ export default function Header() {
                 </div>
             </div>
 
-            {/* Mobile Menu Overlay - Commented out for debugging */}
-            {/* <AnimatePresence>
+            {/* Mobile Menu Overlay */}
+            <AnimatePresence>
                 {mobileMenuOpen && (
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
@@ -117,7 +117,7 @@ export default function Header() {
                         </a>
                     </motion.div>
                 )}
-            </AnimatePresence> */}
+            </AnimatePresence>
         </motion.header>
     );
 }
