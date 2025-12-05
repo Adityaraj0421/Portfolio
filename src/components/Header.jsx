@@ -56,12 +56,22 @@ export default function Header() {
                     <nav className="hidden md:flex items-center gap-10">
                         {['Work', 'About', 'Contact'].map((item) => (
                             <Magnetic key={item}>
-                                <a
-                                    href={`#${item.toLowerCase()}`}
+                                <button
+                                    onClick={() => {
+                                        const id = item.toLowerCase();
+                                        if (window.location.pathname !== '/') {
+                                            window.location.href = `/#${id}`;
+                                        } else {
+                                            const element = document.getElementById(id);
+                                            if (element) {
+                                                element.scrollIntoView({ behavior: 'smooth' });
+                                            }
+                                        }
+                                    }}
                                     className="text-base font-medium text-gray-400 hover:text-white transition-colors block px-2 py-1"
                                 >
                                     {item}
-                                </a>
+                                </button>
                             </Magnetic>
                         ))}
                     </nav>
@@ -69,7 +79,7 @@ export default function Header() {
                     {/* CTA Button */}
                     <Magnetic>
                         <a
-                            href="mailto:kang.applies@gmail.com"
+                            href="mailto:adityaraj2942004@gmail.com"
                             className="hidden md:block px-6 py-3 bg-white text-dark font-medium rounded-full text-base hover:bg-gray-200 transition-colors"
                         >
                             Let's Talk
@@ -100,17 +110,27 @@ export default function Header() {
                         className="fixed inset-0 bg-dark z-40 flex flex-col items-center justify-center space-y-8 md:hidden"
                     >
                         {['Work', 'About', 'Contact'].map((item) => (
-                            <a
+                            <button
                                 key={item}
-                                href={`#${item.toLowerCase()}`}
-                                onClick={() => setMobileMenuOpen(false)}
+                                onClick={() => {
+                                    setMobileMenuOpen(false);
+                                    const id = item.toLowerCase();
+                                    if (window.location.pathname !== '/') {
+                                        window.location.href = `/#${id}`;
+                                    } else {
+                                        const element = document.getElementById(id);
+                                        if (element) {
+                                            element.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }
+                                }}
                                 className="text-4xl font-display font-bold text-white hover:text-blue-500 transition-colors"
                             >
                                 {item}
-                            </a>
+                            </button>
                         ))}
                         <a
-                            href="mailto:kang.applies@gmail.com"
+                            href="mailto:adityaraj2942004@gmail.com"
                             className="px-8 py-4 bg-white text-dark font-medium rounded-full text-xl hover:bg-gray-200 transition-colors mt-8"
                         >
                             Let's Talk

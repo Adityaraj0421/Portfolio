@@ -10,6 +10,7 @@ import GrainOverlay from './components/GrainOverlay';
 import Preloader from './components/Preloader';
 import Home from './pages/Home';
 import ProjectPage from './pages/ProjectPage';
+import Photography from './pages/Photography';
 import './index.css';
 
 function App() {
@@ -55,10 +56,11 @@ function App() {
 
       <Header />
 
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/project/:id" element={<ProjectPage />} />
+          <Route path="/photography" element={<Photography />} />
         </Routes>
       </AnimatePresence>
 

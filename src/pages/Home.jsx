@@ -6,8 +6,13 @@ export default function Home() {
     return (
         <main>
             <Hero />
-            <BentoGrid />
-            <About />
+            <div id="work">
+                <BentoGrid />
+            </div>
+            <div id="about">
+                <About />
+            </div>
+            <div id="contact"></div>
         </main>
     );
 }

@@ -12,7 +12,7 @@ export default function Footer() {
                         </h3>
                         <div className="flex gap-8">
                             <Magnetic>
-                                <a href="mailto:kang.applies@gmail.com" className="group flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+                                <a href="mailto:adityaraj2942004@gmail.com" className="group flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
                                     <div className="p-3 rounded-full bg-dark-lighter border border-dark-border group-hover:border-white/20 transition-colors">
                                         <Mail size={20} />
                                     </div>
@@ -20,7 +20,7 @@ export default function Footer() {
                                 </a>
                             </Magnetic>
                             <Magnetic>
-                                <a href="#" className="group flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+                                <a href="https://www.linkedin.com/in/aditya-raj-186509143" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
                                     <div className="p-3 rounded-full bg-dark-lighter border border-dark-border group-hover:border-white/20 transition-colors">
                                         <Linkedin size={20} />
                                     </div>
@@ -28,7 +28,7 @@ export default function Footer() {
                                 </a>
                             </Magnetic>
                             <Magnetic>
-                                <a href="#" className="group flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+                                <a href="https://dribbble.com/kang7" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
                                     <div className="p-3 rounded-full bg-dark-lighter border border-dark-border group-hover:border-white/20 transition-colors">
                                         <Dribbble size={20} />
                                     </div>
